@@ -1,0 +1,15 @@
+
+export default function SearchBar({ name, setName, onSearch }) {
+  return (
+    <div>
+      <input
+        className="input"
+        type="text"
+        placeholder="Search a vegan food..."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={onSearch}>Search</button>
+    </div>
+  );
+}
