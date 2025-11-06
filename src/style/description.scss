@@ -1,0 +1,60 @@
+@import './__color';
+
+.description__card {
+    section {
+        margin-block: 3rem;
+    }
+
+    .card {
+        background: $primary-color;
+        border-radius: 1.2rem;
+        box-shadow: 0 6px 12px rgba(78, 57, 105, 0.09);
+    }
+}
+
+div.container__cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    div.card {
+        padding: 1rem;
+
+        .description__text {
+            margin-top: 1rem;
+            color: $dark-text;
+        }
+
+        div.number {
+            border-radius: 100%;
+            background: $dark-green;
+            color: white;
+            font-weight: 800;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .description__text {
+            ul {
+                height: 160px;
+                overflow: scroll;
+                font-size: 12px;
+            }
+
+            span {
+                display: block;
+                margin-block: .4rem;
+            }
+
+            li {
+                background-color: $dark-text;
+                margin: 2px;
+                padding: .15rem;
+                color: $white;
+                display: inline-block;
+                border-radius: .4rem;
+            }
+        }
+    }
+}

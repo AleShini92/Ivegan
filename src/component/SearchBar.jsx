@@ -1,4 +1,3 @@
-
 export default function SearchBar({ name, setName, onSearch }) {
   return (
     <div>

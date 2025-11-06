@@ -1,5 +1,4 @@
-$primary-color:     hsl(125, 39%, 94%);     // green
-$secondary-color:   hsl(28, 100%, 50%);     // orange
+@import './_color';
 
 .navbar {
     background: $primary-color;
