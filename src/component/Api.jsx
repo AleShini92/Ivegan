@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 
 import '../style/api.scss'
-import logo from '../assets/logo_vegan.svg'
 
 const spoonacularAPIKEY = "4efcd35a1d374719a6c8c9ab2eb5f1ce";
 
 export default function Api({ recipes, setRecipes, searchFood, showList }) {
-  // const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     axios
@@ -29,7 +27,7 @@ export default function Api({ recipes, setRecipes, searchFood, showList }) {
   return (
     <main className="container__recipes">
       <div className="logo">
-        {/* <img src={logo} alt="logo Ivegan" title="logo Ivegan" /> */}
+        {/* Logo Ivegan */}
         <svg width="50" height="60" viewBox="0 0 90 75" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M55.9296 3.36984L54.4236 4.86343C50.5724 8.71468 50.5724 14.973 54.4236 18.8242C56.3493 20.7498 58.2749 22.6755 60.2128 24.6134C64.0641 28.4647 70.3224
             28.4647 74.1736 24.6134L75.6672 23.1198C76.4325 22.3545 76.4325 21.0955 75.6672 20.3302L74.1736 18.8366C70.3224 14.9853 64.0641 14.9853 60.2128 18.8366C64.0641
@@ -39,7 +37,7 @@ export default function Api({ recipes, setRecipes, searchFood, showList }) {
             54.8433C55.0779 51.8684 59.2871 45.3262 59.2871 38.1175C59.2871 27.9709 51.0661 19.75 40.9196 19.75H40.9319Z"
           fill="#FF9500"/>
         </svg>
-        <h1 className="title">Ricette Vegane</h1>
+        <h2 className="title">Ricette Vegane</h2>
       </div>
       {showList && (
         <ul className="recipes">

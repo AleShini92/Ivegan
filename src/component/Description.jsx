@@ -19,7 +19,10 @@ export default function Description({recipes = []}) {
                         <p className="description__text">Una volta scritto il nome cliccare sul bottone "search"</p>
                     </div>
                     <div className="card">
-                        <div className="number">3</div>
+                        <div className='flex gap-2 items-center'>
+                            <div className="number">3</div>
+                            <div>Recipes List:</div>
+                        </div>
                         <div className="description__text">
                             <ul>
                                 {recipes.length > 0 ? (

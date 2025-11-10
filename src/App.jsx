@@ -1,27 +1,17 @@
 import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-// import component
-import "./App.css";
-import Api from "./component/Api";
-import Navbar from "./component/Navbar";
-import Description from './component/Description'
-
+//import component
+import './style/App.css'
+import AppComponent from './component/AppComponent'
+ 
 function App() {
-  const [name, setName] = useState("");
-  const [searchFood, setSearchFood] = useState("");
-  const [showList, setShowList] = useState(false);
-  const [recipes, setRecipes] = useState([]);
-
-  const handleSearch = () => {
-    setSearchFood(name.trim());
-    setShowList(true);
-  };
 
   return (
     <>
-      <Navbar name={name} setName={setName} handleSearch={handleSearch} />
-      <Description recipes={ recipes } />
-      <Api setRecipes={setRecipes} recipes={recipes} searchFood={searchFood} showList={showList} />
+    <Router>
+      <AppComponent />
+    </Router>
     </>
   );
 }
