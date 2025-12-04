@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import '../style/topFood.scss'
 
 export default function TopFood({recipes = []}) {
@@ -48,12 +49,14 @@ export default function TopFood({recipes = []}) {
                 {limitedRecipes.length > 0 ? (
                   limitedRecipes.map((food) =>
                     <li className="card__recipe" key={food.id}>
-                        <figure className="card__img">
-                            <img src={food.image} alt={food.title} width="100%" />
-                        </figure>
-                        <figcaption className="description">
-                            <strong>{food.title}</strong>
-                        </figcaption>
+                        <Link to={`/${food.id}`}>
+                            <figure className="card__img">
+                                <img src={food.image} alt={food.title} width="100%" />
+                            </figure>
+                            <figcaption className="description">
+                                <strong>{food.title}</strong>
+                            </figcaption>
+                        </Link>
                     </li>
                 )
                 ) : (

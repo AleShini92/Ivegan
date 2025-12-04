@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import '../style/Nav.scss'
 import SearchBar from "./SearchBar";
-import AppContent from './AppComponent';
+
+import MyRecipe from "./MyRecipe"
 
 export default function Navbar({ name, setName, handleSearch }) {
   return (
-    <section>
+    <section className='container__nav'>
         <nav className="navbar">
             <h2>
                 <Link to='/'>
@@ -43,7 +44,8 @@ export default function Navbar({ name, setName, handleSearch }) {
             </h2>
             <SearchBar name={name} setName={setName} onSearch={handleSearch} />
             <div>
-                <span className="prefer__food">My Recipes</span>
+                {/* <span className="prefer__food">My Recipes</span> */}
+                <MyRecipe />
             </div>
         </nav>
     </section>

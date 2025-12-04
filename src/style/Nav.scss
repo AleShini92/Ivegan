@@ -1,5 +1,11 @@
 @import './_color';
 
+.container__nav {
+    position: sticky;
+    top: 0.3rem;
+    z-index: 1;
+}
+
 .navbar {
     background: $light-green;
     padding: 1rem;

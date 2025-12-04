@@ -1,61 +1,67 @@
-import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { useState, useEffect } from "react";
 
-// import component
+import axios from "axios";
+import "../style/App.css";
+
+// Import componenti
 import Api from "./Api";
 import Navbar from "./Navbar";
 import Description from "./Description";
 import Header from "./Header";
 import TopFood from "./TopFood";
+import Footer from './Footer';
 
-export default function AppContent() {
+export default function AppComponent() {
   const [name, setName] = useState("");
   const [searchFood, setSearchFood] = useState("");
   const [showList, setShowList] = useState(false);
   const [recipes, setRecipes] = useState([]);
 
-  const navigate = useNavigate();
+  //console.table(recipes);
+
+  const spoonacularAPIKEY = "4efcd35a1d374719a6c8c9ab2eb5f1ce";
+  //https://spoonacular.com/food-api/docs
+
+  useEffect(() => {
+    axios
+      .get("https://api.spoonacular.com/recipes/complexSearch", {
+        params: {
+          apiKey: spoonacularAPIKEY,
+          diet: "vegan",
+          number: 50,
+        },
+      }
+    )
+    .then((resp) => setRecipes(resp.data.results))
+    .catch((err) => console.error(err));
+  }, []);
 
   const handleSearch = () => {
-    if (name.trim());
+    if (name.trim()); // voglio che vengano mostrate tutte le ricette.
     setSearchFood(name.trim());
-    setShowList(true);
-    navigate("/api"); // vai alla pagina dei risultati
+    setShowList(true); // Mostra il componente Api
   };
 
   return (
     <>
-      {/* Navbar visibile su tutte le pagine */}
+      {/* Navbar con barra di ricerca */}
       <Navbar name={name} setName={setName} handleSearch={handleSearch} />
+
+      {/* Sezione introduttiva */}
       <Header />
-      <TopFood recipes={recipes} />
       <Description recipes={recipes} />
+      <TopFood recipes={recipes} />
 
-      <Routes>
-        {/* Home Page */}
-        <Route
-          path="/"
-          // element='/'
+      {/* 🔹 Se showList è true, mostra il componente Api */}
+      {showList && (
+        <Api
+          setRecipes={setRecipes}
+          recipes={recipes}
+          searchFood={searchFood}
+          showList={showList}
         />
-
-        {/*  Pagina dei risultati */}
-        <Route
-          path="/api"
-          element={
-            <Api
-              setRecipes={setRecipes}
-              recipes={recipes}
-              searchFood={searchFood}
-              showList={showList}
-            />
-          }
-        />
-      </Routes>
+      )}
+      <Footer />
     </>
   );
 }

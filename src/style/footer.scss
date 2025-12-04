@@ -1,0 +1,21 @@
+@import './__color';
+
+footer {
+    background: $light-green;
+    border-radius: .8rem;
+    padding: 2rem;
+}
+
+
+.container__footer {
+    display: flex;
+    gap: 6rem;
+
+    li {
+        text-transform: capitalize;
+    }
+
+    :where(.products, .about__us, .resources) li:first-child {
+        font-weight: bold;
+    }
+}

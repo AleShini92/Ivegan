@@ -8,7 +8,7 @@ export default function Header() {
                 <div className="description">
                     <h2 className='header__text'>
                         <p><span>healthy eating</span> is an <span>important</span> part of <span>lifestyle</span>!!</p>
-                        <p className='mission__text'>prepare with our recipe your delicious vegan food!</p>
+                        <p className='mission__text'>prepare our delicious recipe vegan food!</p>
                     </h2>
                 </div>
                 <img src={bg} alt='background image' title='mixed salad'/>

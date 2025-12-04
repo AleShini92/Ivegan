@@ -1,24 +1,10 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import '../style/api.scss'
 
-const spoonacularAPIKEY = "4efcd35a1d374719a6c8c9ab2eb5f1ce";
-
 export default function Api({ recipes, setRecipes, searchFood, showList }) {
-
-  useEffect(() => {
-    axios
-      .get("https://api.spoonacular.com/recipes/complexSearch", {
-        params: {
-          apiKey: spoonacularAPIKEY,
-          diet: "vegan",
-          number: 50,
-        },
-      })
-      .then((resp) => setRecipes(resp.data.results))
-      .catch((err) => console.error(err));
-  }, []);
 
   const filteredFood = recipes.filter((food) =>
     food.title.toLowerCase().startsWith(searchFood.toLowerCase())
@@ -44,14 +30,16 @@ export default function Api({ recipes, setRecipes, searchFood, showList }) {
           {filteredFood.length > 0 ? (
             filteredFood.map((food) => (
               <li className='card__recipe' key={food.id}>
-                <div className="container__card">
-                  <figure className="card__img">
-                    <img src={food.image} alt={food.title} width="100%" />
-                  </figure>
-                  <figcaption className="description">
-                    <strong>{food.title}</strong>
-                  </figcaption>
-                </div>
+                <Link to={`/${food.id}`}>
+                  <div className="container__card">
+                    <figure className="card__img">
+                      <img src={food.image} alt={food.title} title={food.title} width="100%" />
+                    </figure>
+                    <figcaption className="description">
+                      <strong>{food.title}</strong>
+                    </figcaption>
+                  </div>
+                </Link>
               </li>
             ))
           ) : (
