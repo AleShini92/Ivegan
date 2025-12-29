@@ -2,6 +2,7 @@ export default function SearchBar({ name, setName, onSearch }) {
   return (
     <div>
       <input
+        name="recipe"
         className="input"
         type="text"
         placeholder="Search a vegan food..."
