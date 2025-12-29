@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 import '../style/api.scss'
 
-export default function Api({ recipes, setRecipes, searchFood, showList }) {
+export default function Api({ recipes, searchFood, showList }) {
 
   const filteredFood = recipes.filter((food) =>
     food.title.toLowerCase().startsWith(searchFood.toLowerCase())

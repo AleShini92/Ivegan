@@ -52,7 +52,7 @@ export default function AppComponent() {
       <Description recipes={recipes} />
       <TopFood recipes={recipes} />
 
-      {/* 🔹 Se showList è true, mostra il componente Api */}
+      {/* Se showList è true, mostra il componente Api */}
       {showList && (
         <Api
           setRecipes={setRecipes}

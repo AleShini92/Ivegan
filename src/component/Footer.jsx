@@ -35,7 +35,8 @@ export default function Footer() {
                         fill="#FF7700"/>
                     </svg>
                 </div>
-                <div className='products'>
+                <div className='footer__container'>
+                    <div className='products'>
                     <ul>
                         <li>
                             products:
@@ -56,8 +57,8 @@ export default function Footer() {
                             partnerships
                         </li>
                     </ul>
-                </div>
-                <div className='about__us'>
+                    </div>
+                    <div className='about__us'>
                     <ul>
                         <li>
                             about us:
@@ -75,8 +76,8 @@ export default function Footer() {
                             careers
                         </li>
                     </ul>
-                </div>
-                <div className='resources'>
+                    </div>
+                    <div className='resources'>
                     <ul>
                         <li>
                             resources:
@@ -92,6 +93,7 @@ export default function Footer() {
                         <div></div>
                         <div></div>
                         <div></div>
+                    </div>
                     </div>
                 </div>
             </div>

@@ -22,17 +22,17 @@ export default function IveganDetails() {
       });
   }, [id]);
 
-  // 🔹 Stato di caricamento
+  // Stato di caricamento
   if (!food && !error) {
     return <p>Caricamento in corso...</p>;
   }
 
-  // 🔹 Stato di errore
+  // Stato di errore
   if (error) {
     return <p>{error}</p>;
   }
 
-  // 🔹 Stato OK
+  // Stato OK
   return (
     <section className="recipe-details">
       <Link to="/">← Torna alla lista</Link>

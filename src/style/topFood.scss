@@ -3,33 +3,32 @@
 .container__top-food {
 
   .top__food {
-  width: 90%;
-  margin: 3rem auto;
-  background: $light-green;
-  border-radius: 1.5rem;
-  padding: 2rem;
+    width: 90%;
+    margin: 3rem auto;
+    background: $light-green;
+    border-radius: 1.5rem;
+    padding: 2rem;
 
-  .text__top_food {
-    display: flex;
-    gap: 20px;
+    .text__top_food {
+      display: flex;
 
-    p {
-      border-left: 2px solid $dark-text;
-      padding-left: 10px;
+      p {
+        border-left: 2px solid $dark-text;
+        padding-left: 10px;
 
-      span {
-        font-size: 1.55rem;
+        span {
+          font-size: 1.55rem;
+        }
       }
     }
-  }
 
-  ul.recipes {
-    display: flex;
+    ul.recipes {
+      display: flex;
 
-    li.card__recipe {
-      max-width: 250px;
+      li.card__recipe {
+        max-width: 250px;
+      }
+
     }
-
   }
-}
 }
