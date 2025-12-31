@@ -5,7 +5,7 @@ export default function SearchBar({ name, setName, onSearch }) {
         name="recipe"
         className="input"
         type="text"
-        placeholder="Search a vegan food..."
+        placeholder="Search vegan food..."
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
