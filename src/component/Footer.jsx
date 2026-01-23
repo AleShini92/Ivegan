@@ -1,7 +1,6 @@
 import '../style/footer.scss'
 import Yt from '../img/youtube.svg'
 import Fb from '../img/Fb.svg'
-
 import In from '../img/In.svg'
 
 export default function Footer() {
@@ -10,7 +9,7 @@ export default function Footer() {
             <div className='container__footer'>
                 <div className='footer__logo'>
                     {/* Logo Ivegan */}
-                    <svg width="180" height="79" viewBox="0 0 170 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="140" height="79" viewBox="0 0 170 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M55.9296 3.36984L54.4236 4.86343C50.5724 8.71468 50.5724 14.973 54.4236 18.8242C56.3493 20.7498 58.2749 22.6755 60.2128 24.6134C64.0641 28.4647 70.3224
                         28.4647 74.1736 24.6134L75.6672 23.1198C76.4325 22.3545 76.4325 21.0955 75.6672 20.3302L74.1736 18.8366C70.3224 14.9853 64.0641 14.9853 60.2128 18.8366C64.0641
                         14.9853 64.0641 8.72702 60.2128 4.87577L58.7193 3.36984C57.9539 2.60452 56.6949 2.60452 55.9296 3.36984ZM40.9319 19.75C35.3525 19.75 30.1805 22.2681 26.7366 26.4527L33.7355
@@ -40,12 +39,13 @@ export default function Footer() {
                         fill="#FF7700"/>
                     </svg>
                     <div className="social">
-                        <img src={In} alt="Instagram social" title="Instagram" srcset="" />
-                        <img src={Fb} alt="Facebook social" title="Facebook" srcset="" />
-                        <img src={Yt} alt="Youtube social" title="Youtube" srcset="" />
+                        <img src={In} alt="Instagram social" title="Instagram" />
+                        <img src={Fb} alt="Facebook social" title="Facebook" />
+                        <img src={Yt} alt="Youtube social" title="Youtube" />
                     </div>
                 </div>
-                <div className='footer__container'>
+                {/* link list */}
+                <div className='footer__menu'>
                     <div className='products'>
                     <ul>
                         <li>

@@ -3,7 +3,6 @@
 .description__card {
     section {
         margin-block: 3rem;
-        //margin: 0;
     }
 
     .card {
@@ -57,5 +56,12 @@ div.container__cards {
                 border-radius: .4rem;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.container__cards {
+        display: flex;
+        flex-direction: column;
     }
 }

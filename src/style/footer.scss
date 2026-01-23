@@ -7,11 +7,11 @@ footer {
 
     .footer__logo .social {
         display: flex;
-        gap: 10px;
-        justify-content: center;
+        // gap: 10px;
+        justify-content: space-evenly;
 
         img {
-            width: 2em;
+            width: 1.5em;
             margin-top: 1em;
 
             &:hover {
@@ -19,13 +19,13 @@ footer {
             }
         }
         img[title="Youtube"] {
-            width: 2.6em;
+            width: 2em;
         }
     }
 }
 
 .social:hover img:not(:hover) {
-    filter: grayscale(1);
+    filter: grayscale(.85);
 }
 
 .container__footer {
@@ -34,7 +34,7 @@ footer {
     justify-content: space-around;
 }
 
-.footer__container {
+.footer__menu {
     display: flex;
     gap: 6rem;
 
@@ -42,7 +42,17 @@ footer {
         text-transform: capitalize;
     }
 
+    li:not(:first-child) {
+        cursor: pointer;
+    }
+
     :where(.products, .about__us, .resources) li:first-child {
         font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container__footer, .footer__menu {
+        gap: 2em;
     }
 }
