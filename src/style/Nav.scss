@@ -13,6 +13,7 @@
     display: flex;
     gap: 10em;
     padding: 1rem;
+    justify-content: space-around;
 }
 
 .prefer__food {
@@ -28,4 +29,14 @@
     border-color: $secondary-color;
     border-bottom-width: .1rem;
     margin-inline-end: 1rem;
+}
+
+@media screen and (max-width: 680px) {
+    .navbar {
+        display: block;
+
+        svg {
+            width: 100px;
+        }
+    }
 }
