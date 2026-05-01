@@ -31,6 +31,10 @@
     margin-inline-end: 1rem;
 }
 
+.menu {
+    display: none;
+}
+
 @media screen and (max-width: 680px) {
     .navbar {
         display: block;
@@ -38,5 +42,12 @@
         svg {
             width: 100px;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+
     }
 }

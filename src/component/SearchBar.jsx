@@ -1,6 +1,6 @@
 export default function SearchBar({ name, setName, onSearch }) {
   return (
-    <div>
+    <div className="search-bar">
       <input
         name="recipe"
         className="input"
