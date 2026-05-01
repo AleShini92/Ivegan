@@ -1,9 +1,20 @@
 import { Link } from 'react-router-dom';
 import '../style/Nav.scss'
 import SearchBar from "./SearchBar";
+import SearchBarMenu from "./SearchBarmenu";
 
+
+
+import { useState } from "react";
 
 export default function Navbar({ name, setName, handleSearch }) {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleIcon = () => {
+        setIsOpen(!isOpen);
+    }
+
   return (
     <section className='container__nav'>
         <nav className="navbar">
@@ -42,6 +53,23 @@ export default function Navbar({ name, setName, handleSearch }) {
                 </Link>
             </h2>
             <SearchBar name={name} setName={setName} onSearch={handleSearch} />
+            
+            {/* hamburger menu */}
+            <div className='hamburger-menu'>
+                <div
+                    id="nav-icon"
+                    className={isOpen ? "open" : ""}
+                    onClick={toggleIcon}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className={`menu ${isOpen ? "show" : ""}`}>
+                    <SearchBarMenu name={name} setName={setName} onSearch={handleSearch} />
+                </div>
+            </div>
         </nav>
     </section>
   );
