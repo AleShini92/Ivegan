@@ -9,7 +9,7 @@ export default function Api({ recipes, searchFood, showList }) {
   );
 
   return (
-    <main className="container__recipes">
+    <main className="m-block-20">
       <div className="logo">
         {/* Logo Ivegan */}
         <svg width="50" height="60" viewBox="0 0 90 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +24,7 @@ export default function Api({ recipes, searchFood, showList }) {
         <h2 className="title">Ricette Vegane</h2>
       </div>
       {showList && (
-        <ul className="recipes">
+        <ul className="recipes d-grid">
           {filteredFood.length > 0 ? (
             filteredFood.map((food) => (
               <li className='card__recipe pointer' key={food.id}>

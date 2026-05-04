@@ -41,11 +41,11 @@ export default function IveganDetails() {
   return (
     <>
     <Navbar/>
-    <article className="recipe-details">
+    <article className="recipe-details m-block-50">
 
-      <h1>{food.title}</h1>
+      <h1 className="m-block-30 t-center">{food.title}</h1>
       <figure>
-        <img src={food.image} alt={food.title} width="400" />
+        <img className="m-auto b-radius_2" src={food.image} alt={food.title} width="400" />
         <figcaption><h2><b>Ricetta:</b></h2></figcaption>
       </figure>
 
@@ -67,9 +67,9 @@ export default function IveganDetails() {
         </div>
       </section>
 
-      <section className="ingredients">
+      <section className="ingredients m-block-30">
       <h3><b>Ingredienti:</b></h3>
-      <ul>
+      <ul className="ml-30">
         {food.extendedIngredients?.map((ing) => (
           <li key={ing.id}>{ing.original}</li>
         ))}

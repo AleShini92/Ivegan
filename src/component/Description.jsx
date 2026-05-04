@@ -4,8 +4,8 @@ export default function Description({recipes = []}) {
     return (
         <article className="description__card">
             <section>
-                <div className="container__cards">
-                    <div className="card">
+                <div className="container__cards d-grid gap-3">
+                    <div className="card b-radius_3 p-0">
                         <div className="number">1</div>
                         <p className="description__text">
                             Scrivere sulla barra di ricerca il tipo di ricetta desiderata:
@@ -26,7 +26,7 @@ export default function Description({recipes = []}) {
                         <div className="description__text">
                             <ul>
                                 {recipes.length > 0 ? (
-                                recipes.map((food, index) => <li key={index}>{food.title}</li>)
+                                recipes.map((food, index) => <li className='i-block' key={index}>{food.title}</li>)
                                 ) : (
                                 <li>Nessuna ricetta trovata</li>
                                 )}

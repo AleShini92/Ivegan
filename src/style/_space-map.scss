@@ -100,6 +100,7 @@ $margins: (
 
 $padding: 1rem;
 $padding: (
+  "0": $padding,
   "1": $padding * .25,
   "2": $padding * .5,
   "3": $padding * 1.5,
@@ -107,6 +108,7 @@ $padding: (
 );
 
 @each $key, $val in $padding {
+  
   .p-#{$key} {
     padding: $val;
   }
@@ -215,7 +217,7 @@ $height: (
 }
 
 /*
- * height in pixel
+ * height in rem
  *
 */
 

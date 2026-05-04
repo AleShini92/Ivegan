@@ -1,8 +1,5 @@
 @use 'color' as c;
 
-.container__recipes {
-  margin-block: 20px;
-}
 
 .logo {
   display: flex;
@@ -31,7 +28,6 @@
 }
 
 ul.recipes {
-  display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   margin-top: 2rem;
