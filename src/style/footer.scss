@@ -1,14 +1,12 @@
-@import './__color';
+@use 'color' as c;
 
 footer {
-    background: $light-green;
+    background: c.$light-green;
     border-radius: .8rem;
     padding: 2rem;
 
     .footer__logo .social {
-        display: flex;
-        // gap: 10px;
-        justify-content: space-evenly;
+
 
         img {
             width: 1.5em;
@@ -29,13 +27,10 @@ footer {
 }
 
 .container__footer {
-    display: flex;
     gap: 5em;
-    justify-content: space-around;
 }
 
 .footer__menu {
-    display: flex;
     gap: 6rem;
 
     li {
@@ -81,8 +76,8 @@ footer {
         flex-direction: column;
 
         .about__us {
-            border-top: 1px solid $secondary-color;
-            border-bottom: 1px solid $secondary-color;
+            border-top: 1px solid c.$secondary-color;
+            border-bottom: 1px solid c.$secondary-color;
             padding: 1rem;
         }
     }

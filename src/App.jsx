@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //import component
 import './style/App.css'
+//import './style/style.css'
 import AppComponent from './component/AppComponent'
 import Details from './component/IveganDetails'
  

@@ -1,4 +1,4 @@
-@import './__color';
+@use 'color' as c;
 
 .container__recipes {
   margin-block: 20px;
@@ -23,7 +23,7 @@
       display: inline-block;
       width: 100px;
       height: 5px;
-      background: $secondary-color;
+      background: c.$secondary-color;
       position: absolute;
       top: 50px;
     }
@@ -38,8 +38,7 @@ ul.recipes {
 }
 
 .card__recipe {
-  cursor: pointer;
-  background: $primary-color;
+  background: c.$primary-color;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(78, 57, 105, 0.21);
   flex-basis: 200px;
@@ -53,7 +52,7 @@ ul.recipes {
     line-height: 1.2rem;
     margin-block: .9rem;
     padding-inline: .4rem 0;
-    color: $dark-text;
+    color: c.$dark-text;
   }
 
   figure.card__img {

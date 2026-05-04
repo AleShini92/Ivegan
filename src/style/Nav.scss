@@ -1,46 +1,42 @@
-@import './_color';
+@use 'color' as c;
 
 .container__nav {
-    position: sticky;
-    top: 0.3rem;
-    z-index: 1;
+  top: 0.3rem;
+  z-index: 1;
 }
 
 .navbar {
-    align-items: center;
-    background: $light-green;
-    border-radius: .8rem;
-    display: flex;
-    gap: 10em;
-    padding: 2.5rem;
-    justify-content: space-around;
-    position: relative;
+  align-items: center;
+  background: c.$light-green;
+  border-radius: .8rem;
+  gap: 10em;
+  padding: 2.5rem;
 }
 
-.prefer__food {
-    display: inline-block;
-    background-color: $secondary-color;
-    color: white;
-    padding: .5em;
-    border-radius: .5em;
-    cursor: pointer;
-}
+// .prefer__food {
+//   display: inline-block;
+//   background-color: c.$secondary-color;
+//   color: white;
+//   padding: .5em;
+//   border-radius: .5em;
+//   cursor: pointer;
+// }
 
 .input {
-    border-color: $secondary-color;
-    border-bottom-width: .1rem;
-    margin-inline-end: 1rem;
+  border-color: c.$secondary-color;
+  border-bottom-width: .1rem;
+  margin-inline-end: 1rem;
 }
 
 .menu {
-    display: none;
+  display: none;
 }
 
-// hamburger-menu
+// ---------- hamburger-menu ---------- //
 
 .hamburger-menu {
-    display: none;
-    top: -25px;
+  display: none;
+  top: -25px;
 }
 
 #nav-icon {

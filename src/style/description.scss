@@ -1,4 +1,4 @@
-@import './__color';
+@use 'color' as c;
 
 .description__card {
     section {
@@ -6,10 +6,10 @@
     }
 
     .card {
-        background: $primary-color;
+        background: c.$primary-color;
         border-radius: 1.2rem;
         box-shadow: 0 6px 12px rgba(78, 57, 105, 0.09);
-        color: $dark-text;
+        color: c.$dark-text;
     }
 }
 
@@ -27,8 +27,8 @@ div.container__cards {
 
         div.number {
             border-radius: 100%;
-            background: $dark-green;
-            color: white;
+            background: c.$dark-green;
+            color: c.$white;
             font-weight: 800;
             padding: 10px;
             width: 40px;
@@ -48,10 +48,10 @@ div.container__cards {
             }
 
             li {
-                background-color: $dark-text;
+                background-color: c.$dark-text;
                 margin: 2px;
                 padding: .15rem;
-                color: $white;
+                color: c.$white;
                 display: inline-block;
                 border-radius: .4rem;
             }

@@ -16,8 +16,8 @@ export default function Navbar({ name, setName, handleSearch }) {
     }
 
   return (
-    <section className='container__nav'>
-        <nav className="navbar">
+    <section className='container__nav sticky'>
+        <nav className="navbar d-flex space-around relative">
             <h2>
                 <Link to='/'>
                     {/* Logo Ivegan */}

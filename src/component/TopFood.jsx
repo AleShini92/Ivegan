@@ -10,7 +10,7 @@ export default function TopFood({recipes = []}) {
         <section className='container__top-food'>
             <div className='top__food'>
                 {/* Logo Ivegan */}
-            <div className='text__top_food'>
+            <div className='text__top_food d-flex'>
                 <svg width="80" height="79" viewBox="0 0 90 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M55.9296 3.36984L54.4236 4.86343C50.5724 8.71468 50.5724 14.973 54.4236 18.8242C56.3493 20.7498 58.2749 22.6755 60.2128 24.6134C64.0641 28.4647 70.3224
                 28.4647 74.1736 24.6134L75.6672 23.1198C76.4325 22.3545 76.4325 21.0955 75.6672 20.3302L74.1736 18.8366C70.3224 14.9853 64.0641 14.9853 60.2128 18.8366C64.0641
@@ -25,7 +25,7 @@ export default function TopFood({recipes = []}) {
                     <br />Top Food
                 </p>
             </div>
-            <ul className="recipes">
+            <ul className="recipes d-flex">
                 {limitedRecipes.length > 0 ? (
                   limitedRecipes.map((food) =>
                     <li className="card__recipe" key={food.id}>

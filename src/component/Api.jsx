@@ -27,7 +27,7 @@ export default function Api({ recipes, searchFood, showList }) {
         <ul className="recipes">
           {filteredFood.length > 0 ? (
             filteredFood.map((food) => (
-              <li className='card__recipe' key={food.id}>
+              <li className='card__recipe pointer' key={food.id}>
                 <Link to={`/${food.id}`}>
                   <div className="container__card">
                     <figure className="card__img">

@@ -1,19 +1,18 @@
-@import './__color';
+@use 'color' as c;
 
 .container__top-food {
 
   .top__food {
     width: 90%;
     margin: 3rem auto;
-    background: $light-green;
+    background: c.$light-green;
     border-radius: 1.5rem;
     padding: 2rem;
 
     .text__top_food {
-      display: flex;
 
       p {
-        border-left: 2px solid $dark-text;
+        border-left: 2px solid c.$dark-text;
         padding-left: 10px;
 
         span {
@@ -23,7 +22,6 @@
     }
 
     ul.recipes {
-      display: flex;
 
       li.card__recipe {
         max-width: 250px;

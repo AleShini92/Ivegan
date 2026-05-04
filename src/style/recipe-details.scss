@@ -1,4 +1,4 @@
-@import './__color';
+@use 'color' as c;
 
 .recipe-details {
     margin-block: 50px;
@@ -34,7 +34,7 @@ section {
         gap: 8px;
         svg {
             width: 22px;
-            fill: $secondary-color;
+            fill: c.$secondary-color;
         }
     }
 }
