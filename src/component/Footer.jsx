@@ -6,7 +6,7 @@ import In from '../img/In.svg'
 export default function Footer() {
     return (
         <footer>
-            <div className='container__footer d-flex space-around'>
+            <div className="container__footer d-flex space-around">
                 <div className='footer__logo'>
                     {/* Logo Ivegan */}
                     <svg width="140" height="79" viewBox="0 0 170 79" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@ export default function Footer() {
                     </div>
                 </div>
                 {/* link list */}
-                <div className='footer__menu d-flex'>
+                <div className="footer__menu d-flex">
                     <div className='products'>
                     <ul>
                         <li>
@@ -87,7 +87,7 @@ export default function Footer() {
                         </li>
                     </ul>
                     </div>
-                    <div className='resources'>
+                    <div className="resources">
                     <ul>
                         <li>
                             resources:

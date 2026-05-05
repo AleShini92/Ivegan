@@ -16,7 +16,7 @@ export default function Navbar({ name, setName, handleSearch }) {
     }
 
   return (
-    <section className='container__nav sticky'>
+    <section className="container__nav sticky">
         <nav className="navbar d-flex space-around relative">
             <h2>
                 <Link to='/'>
@@ -55,7 +55,7 @@ export default function Navbar({ name, setName, handleSearch }) {
             <SearchBar name={name} setName={setName} onSearch={handleSearch} />
             
             {/* hamburger menu */}
-            <div className='hamburger-menu'>
+            <div className="hamburger-menu">
                 <div
                     id="nav-icon"
                     className={isOpen ? "open" : ""}
