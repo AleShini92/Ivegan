@@ -5,13 +5,18 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: hsl(28, 100%, 50%);
+  color: hsl(125, 39%, 40%);
   background-color: hsl(120, 67%, 98%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: white;
+  background: hsl(125, 39%, 40%);
 }
 
 html {
@@ -26,11 +31,8 @@ html {
 
 a {
   font-weight: 500;
-  color: hsl(28, 100%, 50%);
+  color: hsl(125, 39%, 40%);
   text-decoration: inherit;
-}
-a:hover {
-  color: hsl(28, 100%, 50%);
 }
 
 h1 {
@@ -41,17 +43,17 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.4em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: transparent;
-  border-color: hsl(28, 100%, 50%);
+  border-color: hsl(125, 39%, 40%);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  background: hsl(28, 100%, 50%);
+  background: hsl(125, 39%, 40%);
   color: white;
 }
 button:focus,

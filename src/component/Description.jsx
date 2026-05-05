@@ -5,7 +5,7 @@ export default function Description({recipes = []}) {
         <article className="description__card">
             <section>
                 <div className="container__cards d-grid gap-3">
-                    <div className="card b-radius_3 p-0">
+                    <div className="card b-radius_2 p-0">
                         <div className="number">1</div>
                         <p className="description__text">
                             Scrivere sulla barra di ricerca il tipo di ricetta desiderata:
@@ -14,11 +14,11 @@ export default function Description({recipes = []}) {
                             <span><b>Ps:</b> per tutte le ricette non scrivere nulla.</span>
                         </p>
                     </div>
-                    <div className="card">
+                    <div className="card b-radius_2 p-0">
                         <div className="number">2</div>
                         <p className="description__text">Una volta scritto il nome cliccare sul bottone "search"</p>
                     </div>
-                    <div className="card">
+                    <div className="card b-radius_2 p-0">
                         <div className="flex gap-2 items-center">
                             <div className="number">3</div>
                             <div>Recipes List:</div>
