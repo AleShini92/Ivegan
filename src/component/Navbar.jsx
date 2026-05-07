@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import '../style/Nav.scss'
 import SearchBar from "./SearchBar";
 import SearchBarMenu from "./SearchBarmenu";
-import vegan from "../img/logo.svg"
+import vegan from "../img/logo-xs.svg"
 
 
 
@@ -18,9 +18,9 @@ export default function Navbar({ name, setName, handleSearch }) {
 
   return (
     <section className="container__nav sticky">
-        <nav className="navbar d-flex space-between relative">
+        <nav className={`navbar ${isOpen ? "expanded" : ""} d-flex space-between relative menu-navbar`}>
             {/* navigation menu */}
-            <div className="item-menu menu-link d-flex gap-2 w-90">
+            <div className="item-menu menu-link d-flex gap-2">
                 <ul>
                     <li><a>About us</a></li>
                     <li><a>Delivery</a></li>
@@ -28,7 +28,7 @@ export default function Navbar({ name, setName, handleSearch }) {
                 </ul>
             </div>
             {/* logo */}
-            <h2 className="w-lg">
+            <h2>
                 {/* Logo Ivegan */}
                 <Link to='/'>
                     <img src={vegan} alt="" title=""/>
