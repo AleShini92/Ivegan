@@ -8,7 +8,7 @@ export default function TopFood({recipes = []}) {
     const limitedRecipes = recipes.slice(0, maxRecipes);
 
     return (
-        <section className="container__top-food">
+        <section className="container__top-food mb-30">
             <div className="top__food">
                 {/* Logo Ivegan */}
                 <div className="top__food-text d-flex">
