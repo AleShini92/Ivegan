@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../style/Nav.scss'
 import SearchBar from "./SearchBar";
-import SearchBarMenu from "./SearchBarmenu";
 import vegan from "../img/logo-xs.svg"
 
 
