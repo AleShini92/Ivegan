@@ -21,8 +21,12 @@
         font-style: italic;
     }
 
+    .photo {
+        text-align: -webkit-right;
+    }
+
     img {
-        width: 30%;
+        width: 50%;
         height: auto;
         object-fit: scale-down;
     }
@@ -31,5 +35,20 @@
 @media only screen and (max-width: 768px) {
     .container__bg .header__text {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .container__bg {
+        flex-direction: column;
+        gap: 50px;
+
+        .photo {
+            text-align: -webkit-center;
+        }
+
+        img {
+            width: 90%;
+        }
     }
 }
