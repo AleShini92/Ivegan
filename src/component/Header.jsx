@@ -12,12 +12,12 @@ export default function Header() {
                     </h1>
                 </div>
                 {/* <img src={bg_recipe} alt="image recipe for basil pesto" title="recipe for basil pesto"/> */}
-                <div class='photo'>
+                <div className='photo'>
                     <picture>
                         <source media='(min-width: 300px)'
-                            srcset={bg_recipe}/>
+                            srcSet={bg_recipe}/>
                         <source media='(max-width: 500px)'
-                            srcset={bg_recipe}/>
+                            srcSet={bg_recipe}/>
                         <img src={bg_recipe}/>
                     </picture>
                 </div>
