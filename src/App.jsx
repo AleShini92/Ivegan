@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <Router basename="/Ivegan">
       <Routes>
         <Route path='/' element={<AppComponent />} />
         <Route path="/:id" element={<Details />} />
